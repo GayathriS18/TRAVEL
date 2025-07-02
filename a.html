@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tourist Places</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background-color: #f8f8f8;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      font-size: 1.2em;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    nav a:hover {
+      color: #ff6600;
+    }
+
+    .state-header h2 {
+      color: #333;
+      font-size: 28px;
+      margin: 20px 0;
+    }
+
+    .slide {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+    }
+
+    .item {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.5s ease;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    .content {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 30px;
+      border-radius: 12px;
+    }
+
+    .content button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #ff6600;
+      color: white;
+      cursor: pointer;
+      margin-top: 10px;
+      border-radius: 6px;
+    }
+
+    .button {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 20px;
+      transform: translateY(-50%);
+      z-index: 5;
+      pointer-events: none;
+    }
+
+    .button button {
+      background: rgba(255, 255, 255, 0.8);
+      border: none;
+      font-size: 24px;
+      color: #333;
+      cursor: pointer;
+      padding: 12px 18px;
+      border-radius: 50%;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      pointer-events: auto;
+      transition: background 0.3s ease;
+    }
+
+    .button button:hover {
+      background: #ffffff;
+    }
+
+    /* About Us */
+    #about-us {
+      padding: 60px 20px;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+
+    #about-us h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    #about-us p {
+      font-size: 1.2em;
+      color: #555;
+      line-height: 1.8;
+      max-width: 900px;
+      margin: 0 auto 20px;
+    }
+
+    #about-us p:last-child {
+      font-weight: bold;
+      color: #2c3e50;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">🏠 Home</a>
+    <a href="#about-us">📍 About</a>
+    <a href="contact.html">📞 Contact</a>
+  </nav>
+
+  <!-- ==== STATE 1: UTTAR PRADESH ==== -->
+  <section class="state-header">
+    <h2 class="state-name"><center>UTTAR PRADESH</center></h2>
+  </section>
+
+  <div class="slide" id="slide-1">
+    <div class="item" style="background-image: url('imgs/img1.jpg');">
+      <div class="content">
+        <div class="name">TAJ MAHAL</div>
+        <div class="des">A stunning white marble monument symbolizing love.</div>
+        <a href="p1.html"><button>View More</button></a>
+      </div>
+    </div>
+    <div class="item" style="background-image: url('imgs/img2.jpg');">
+      <div class="content">
+        <div class="name">VARANASI</div>
+        <div class="des">One of the oldest living cities in the world.</div>
+        <a href="p11.html"><button>View More</button></a>
+      </div>
+    </div>
+    <div class="item" style="background-image: url('imgs/img3.jpg');">
+      <div class="content">
+        <div class="name">RED FORT</div>
+        <div class="des">A historic fort built during the Mughal era.</div>
+        <a href="p111.html"><button>View More</button></a>
+      </div>
+    </div>
+    <div class="button">
+      <button class="prev" onclick="slidePrev(0)"><i class="fa-solid fa-arrow-left"></i></button>
+      <button class="next" onclick="slideNext(0)"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+  </div>
+
+  <!-- ==== STATE 2: HIMACHAL PRADESH ==== -->
+    <section class="state-header">
+        <h2 class="state-name"><br><br><center>HIMACHAL PRADESH</center></h2>
+    </section>
+
+    <div class="slide" id="slide-2">
+        <div class="item" style="background-image: url('imgs/img4.jpg');">
+            <div class="content">
+                <div class="name">SHIMLA</div>
+                <div class="des">Queen of hills in northern India.</div>
+                <a href="p2.html"><button>View More</button></a>
+            </div>
+        </div>
+        <div class="item" style="background-image: url('imgs/img5.jpeg');">
+            <div class="content">
+                <div class="name">MANALI</div>
+                <div class="des">A picturesque hill town with snow peaks.</div>
+                <a href="p21.html"><button>View More</button></a>
+            </div>
+        </div>
+        <div class="item" style="background-image: url('imgs/img6.jpg');">
+            <div class="content">
+                <div class="name">DHARAMSHALA</div>
+                <div class="des">Home of Dalai Lama and serene vibes.</div>
+                <a href="p22.html"><button>View More</button></a>
+            </div>
+        </div>
+        <div class="button">
+            <button class="prev" onclick="slidePrev(1)"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="next" onclick="slideNext(1)"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+
+    <!-- ==== STATE 3: TAMIL NADU ==== -->
+    <section class="state-header">
+        <h2 class="state-name"><br><br><center>TAMIL NADU</center></h2>
+    </section>
+
+    <div class="slide" id="slide-3">
+        <div class="item" style="background-image: url('imgs/img8.jpg');">
+            <div class="content">
+                <div class="name">MADURAI</div>
+                <div class="des">City of temples with rich Dravidian culture.</div>
+                <a href="p3.html"><button>View More</button></a>
+            </div>
+        </div>
+        <div class="item" style="background-image: url('imgs/img7.jpg');">
+            <div class="content">
+                <div class="name">CHENNAI</div>
+                <div class="des">Capital city with beaches and heritage.</div>
+                <a href="p31.html"><button>View More</button></a>
+            </div>
+        </div>
+        <div class="item" style="background-image: url('imgs/img9.jpg');">
+            <div class="content">
+                <div class="name">OOTY</div>
+                <div class="des">Cool green hill station in the Nilgiris.</div>
+                <a href="p32.html"><button>View More</button></a>
+            </div>
+        </div>
+        <div class="button">
+            <button class="prev" onclick="slidePrev(2)"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="next" onclick="slideNext(2)"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+
+    <!-- ==== STATE 4: KARNATAKA ==== -->
+    <section class="state-header">
+        <h2 class="state-name"><br><br><center>KARNATAKA</center></h2>
+    </section>
+
+    <div class="slide" id="slide-4">
+        <div class="item" style="background-image: url('imgs/img10.jpg');">
+            <div class="content">
+                <div class="name">BENGALURU</div>
+                <div class="des">Silicon Valley of India.</div>
+                <a href="p4.html"><button>View More</button></a>
+            </div>
+        </div>
+        <div class="item" style="background-image: url('imgs/img11.jpg');">
+            <div class="content">
+                <div class="name">HUMPI</div>
+                <div class="des">Ancient ruins of the Vijayanagara empire.</div>
+                <a href="p41.html"><button>View More</button></a>
+            </div>
+        </div>
+        <div class="item" style="background-image: url('imgs/img12.jpg');">
+            <div class="content">
+                <div class="name">MYSORE</div>
+                <div class="des">The city of palaces and royal heritage.</div>
+                <a href="p42.html"><button>View More</button></a>
+            </div>
+        </div>
+        <div class="button">
+            <button class="prev" onclick="slidePrev(3)"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="next" onclick="slideNext(3)"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+
+  <!-- About Us Section -->
+  <section id="about-us">
+    <h2>About Us</h2>
+    <p>
+      Welcome to <strong>Dream. Discover. Delight</strong> — your travel companion to explore the vibrant beauty of India. 
+      From the snow-capped peaks of Himachal to the historic marvels of Uttar Pradesh, and the breezy coastlines of Tamil Nadu to the lush hills of Karnataka, we curate unforgettable journeys for explorers, culture-lovers, and wanderers alike.
+    </p>
+    <p>
+      Our mission is simple: to make travel meaningful and accessible. We provide you with insightful information, curated places to visit, local attractions, food recommendations, travel tips, and everything else you need to plan a hassle-free trip.
+    </p>
+    <p>
+      Built with a passion for exploration and a love for storytelling, our platform is more than just a guide — it's a celebration of the people, places, and cultures that make India extraordinary.
+    </p>
+    <p>
+      Let’s Dream. Let’s Discover. Let’s Delight.
+    </p>
+  </section>
+
+  <!-- JavaScript for Slide Functionality -->
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let actives = Array.from({ length: slides.length }, () => 0);
+
+    slides.forEach((slide, index) => {
+      const items = slide.querySelectorAll('.item');
+      items.forEach((item, i) => {
+        item.style.transform = `translateX(${i * 100}%)`;
+      });
+    });
+
+    function slideNext(slideIndex) {
+      const slide = slides[slideIndex];
+      const items = slide.querySelectorAll('.item');
+      actives[slideIndex] = (actives[slideIndex] + 1) % items.length;
+      updateSlide(slideIndex, items);
+    }
+
+    function slidePrev(slideIndex) {
+      const slide = slides[slideIndex];
+      const items = slide.querySelectorAll('.item');
+      actives[slideIndex] = (actives[slideIndex] - 1 + items.length) % items.length;
+      updateSlide(slideIndex, items);
+    }
+
+    function updateSlide(slideIndex, items) {
+      items.forEach((item, i) => {
+        item.style.transform = `translateX(${(i - actives[slideIndex]) * 100}%)`;
+      });
+    }
+  </script>
+
+</body>
+</html>

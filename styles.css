@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: rgba(199, 95, 199, 0);
+    color: #333;
+    text-align: center;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    font-size: 2rem;
+}
+
+.state-header {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.state-name {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.tourist-places {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.place-card {
+    background-color: white;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.place-card:hover {
+    transform: scale(1.05);
+}
+
+.place-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;  /* Makes the image round */
+    margin-top: 20px;
+    transition: transform 1s ease;
+}
+
+.place-card h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.place-card p {
+    font-size: 1rem;
+    color: #666;
+    margin: 10px;
+}
+
+.view-more {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.view-more:hover {
+    background-color: #45a049;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.place-card .view-more {
+    margin-bottom: 10px; 
+}
+
+.place-card .food-spot, 
+.place-card .navigation-route {
+    margin-top: 10px; 
+}

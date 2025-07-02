@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DHARAMSHALA</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    :root {
+      --card-radius: 18px;
+      --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      --accent: #1f4d91;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f7f9fb;
+    }
+
+    header, footer {
+      background-color: var(--accent);
+      color: white;
+      padding: 3px 0;
+      text-align: center;
+      font-size: 1.2rem;
+    }
+
+    main {
+      padding: 30px 5%;
+    }
+
+    h2 {
+      margin-top: 50px;
+      margin-bottom: 10px;
+      color: #222;
+      font-size: 1.6rem;
+    }
+
+    .grid-triangle {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: var(--card-radius);
+      box-shadow: var(--card-shadow);
+      padding: 20px;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      margin-top: 10px;
+      color: var(--accent);
+    }
+
+    .card p, .card ul {
+      font-size: 0.95em;
+      color: #333;
+    }
+
+    .card ul {
+      padding-left: 20px;
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    /* Floating feedback icon */
+    #feedback-icon {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      //background-color: var(--accent);
+      color: rgb(193, 189, 189);
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 22px;
+      cursor: pointer;
+      box-shadow: var(--card-shadow);
+      z-index: 999;
+    }
+
+    #feedback-form-wrapper {
+      position: fixed;
+      top: 80px;
+      right: 20px;
+      background: white;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: var(--card-shadow);
+      display: none;
+      z-index: 998;
+      width: 300px;
+    }
+
+    #feedback-form-wrapper h4 {
+      margin-top: 0;
+      color: var(--accent);
+    }
+
+    #feedback-form input, #feedback-form textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      font-size: 1em;
+    }
+
+    #feedback-form button {
+      padding: 10px 15px;
+      background-color: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .feedback-list {
+      margin-top: 20px;
+    }
+
+    .feedback-item {
+      background-color: #f1f1f1;
+      padding: 12px;
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+
+    @media screen and (max-width: 500px) {
+      #feedback-form-wrapper {
+        right: 10px;
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>DHARAMSHALA — Explore in Detail</header>
+  <button id="feedback-icon">💬</button>
+  <div id="feedback-form-wrapper">
+  <h4>Share Your Experience</h4>
+    <form id="feedback-form">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <textarea id="message" rows="4" placeholder="Your Feedback" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+    <div class="feedback-list" id="feedback-list"></div>
+  </div>
+
+
+  <main>
+    <h2>🏛️ Attractions & Activities</h2>
+    <div class="grid-triangle">
+      <div class="card">
+        <img src="imgs/MCLEODGANJ.jpg" alt="McLeod Ganj">
+        <h3>McLeod Ganj</h3>
+        <p>Seat of the Dalai Lama, Tibetan cuisine, markets.</p>
+        <p><strong>Timings:</strong> Shops 10 AM–8 PM</p>
+      </div>
+      <div class="card">
+        <img src="imgs/Bhagsu.jpg" alt="Bhagsu Waterfall">
+        <h3>Bhagsu Waterfall & Temple</h3>
+        <p>Scenic waterfall + Shiva temple—nice trek.</p>
+        <p><strong>Timings:</strong> 6 AM–8 PM</p>
+      </div>
+      <div class="card">
+        <img src="imgs/Kangra-Fort.jpg" alt="Kangra Fort">
+        <h3>Kangra Fort</h3>
+        <p>Ancient fort and museum, 20 km from Dharamshala.</p>
+        <p><strong>Timings:</strong> 8 AM–6 PM</p>
+        <p><strong>Tickets:</strong> ₹20</p>
+      </div>
+    </div>
+
+    <h2>🧳 Travel & Accommodation</h2>
+    <div class="grid-triangle">
+      <div class="card">
+        <h3>How to Arrive</h3>
+        <li>By road: 250 km from Chandigarh; nearest rail: Pathankot (85 km).</li>
+      </div>
+      <div class="card">
+        <h3>Places to Stay</h3>
+        <ul>
+          <li>Luxury: Gala Hotel / Fortune Park</li>
+          <li>Mid-range: Tibet Boutique Hotel</li>
+          <li>Budget: Dharamshala hostels & homestays</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>🌍 Guide & Tips</h2>
+    <div class="grid-triangle">
+      <div class="card">
+        <h3>Tips & Culture</h3>
+        <li>Respect Tibetan customs; attend a Dharma talk.</li>
+        <li>Wear layers; rainfall common in monsoon.</li>
+      </div>
+      <div class="card">
+        <h3>Food & Shops</h3>
+        <ul>
+          <li>Common Ground Café</li>
+          <li>Tibetan Library Café</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Spiritual Events</h3>
+        <li>Losar (Tibetan New Year), Monlam Festival in February/March.</li>
+      </div>
+    </div>
+
+    <a href="a.html">← Back to Main Page</a>
+  </main>
+
+  <footer><p>&copy; 2025 Your Travel Agency</p></footer>
+  <script>
+  const form = document.getElementById("feedback-form");
+    const feedbackList = document.getElementById("feedback-list");
+    const icon = document.getElementById("feedback-icon");
+    const formWrapper = document.getElementById("feedback-form-wrapper");
+
+    icon.addEventListener("click", () => {
+      formWrapper.style.display = formWrapper.style.display === "block" ? "none" : "block";
+    });
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      if (name && message) {
+        const feedbackItem = document.createElement("div");
+        feedbackItem.className = "feedback-item";
+        feedbackItem.innerHTML = `<strong>${name}</strong><p>${message}</p>`;
+        feedbackList.appendChild(feedbackItem);
+        form.reset();
+      }
+    });
+  </script>
+</body>
+</html>
