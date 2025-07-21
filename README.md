@@ -4,13 +4,6 @@ An interactive, aesthetic, and responsive tourist website designed to showcase t
 
 ---
 
-## 🖼️ Demo
-
-![Homepage Preview](./imgs/bgpic.jpg)
-
-> **Start Your Adventure** ➤ Explore iconic places across Indian states and discover what makes each destination unique.
-
----
 
 ## ✨ Features
 
