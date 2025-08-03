@@ -3,6 +3,11 @@
 An interactive, aesthetic, and responsive tourist website designed to showcase the beauty of India’s top travel destinations. This platform highlights famous places, local culture, food, travel tips, and user experiences – making it ideal for travelers, explorers, and tourism lovers.
 
 ---
+## Preview
+
+<img width="1920" height="875" alt="Travel" src="https://github.com/user-attachments/assets/7eadc0ac-53f2-44be-8014-8f6cec9413e1" />
+
+
 
 
 ## ✨ Features
